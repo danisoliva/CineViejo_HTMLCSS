@@ -20,11 +20,34 @@ html{
 }
 
 body{
-    background-color: var(--colorBackground);
+    /*background-color: var(--colorBackground);*/
+    background-image: linear-gradient(to top, var(--gris)  0%, var(--colorBackground) 100%);
     font-family: "Krub", sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: var(--blanco);
+}
+
+.sombra{
+    -webkit-box-shadow: 6px 27px 32px 9px rgba(209,88,209,0.89);
+    -moz-box-shadow: 6px 27px 32px 9px rgba(209,88,209,0.89);
+    box-shadow: 6px 27px 32px 9px rgba(209,88,209,0.89);
+    background-color: #694465;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.sombra2{
+    -webkit-box-shadow: 6px 27px 32px 9px rgba(209,88,209,0.89);
+    -moz-box-shadow: 6px 27px 32px 9px rgba(209,88,209,0.89);
+    box-shadow: 6px 27px 32px 9px rgba(209,88,209,0.89);
+    background-color: #5a2455;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .titulo{
@@ -42,6 +65,24 @@ body{
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
+}
+
+/* Codigo para hacer botones desde css con <a href>*/
+.boton{
+    background-color: var(--secundario);
+    color:var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    width: 90%;
+}
+
+@media (min-width: 768px){
+    .boton{
+        width: auto;
+    }
 }
 
 .navegacion-principal{
@@ -119,6 +160,17 @@ body{
     size: 20rem;
 }
 
+#contacto{
+    text-align: center;
+    font-size: 80%;
+}
+
+#piepagina{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 80%;
+}
+
 h1{
     font-size: 5rem;
     text-align: center;
@@ -130,6 +182,7 @@ h1{
     background-size: cover;
     height: 450px;
     position:relative;
+    margin-bottom: 3rem;
 }
 
 .contenido-hero{
@@ -139,4 +192,78 @@ h1{
     height: 100%;
     color:var(--blanco);
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Servicios **/
+@media (min-width: 768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 5rem;
+    }
+    
+}
+
+@media (min-width: 768px){
+    .servios2{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5rem;
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio .imagen{
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Modal - Estilos básicos */
+.modal {
+    display: none; /* Ocultamos el modal por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Para asegurarse de que el modal esté encima del contenido */
+}
+
+.modal-content {
+    position: relative; /* Necesario para el posicionamiento del botón de cierre */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    margin: 50px auto;
+}
+
+.close {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #000; /* Ajusta el color a tu preferencia */
+    background-color: transparent;
+}
+
+.modal-toggle:checked + .modal {
+    display: flex; /* Mostrar el modal cuando se marque el checkbox */
 }
