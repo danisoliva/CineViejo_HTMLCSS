@@ -1,5 +1,97 @@
+:root{
+    --blanco: #FFFFFF;
+    --negro: #212121;
+    --primario:#4233ff;
+    --secundario: #9933ff;
+    --gris: #757575;
+
+    --tamañofuente: 2.25rem;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Krub", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.titulo{
+    font-size: 5rem;
+    color: var(--primario);
+    text-align: center;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+    
+}
+
+.contenedor{
+    width: 120rem;
+    margin: 0 auto;
+}
+
+.navegacion-principal{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    
+}
+
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.pelicula{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:2rem;
+    text-align: left;
+}
+
+.subtitulo{
+    font-size: var(--tamañofuente);
+    text-align: center;
+}
+
+#inicio{
+    font-size: var(--tamañofuente);
+    text-align: center;
+}
+
+#bienvenida{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#cartelera{
+    font-size: var(--tamañofuente);
+    text-align: center; 
+}
+
+#proximos-estrenos{
+    font-size: var(--tamañofuente);
+    text-align: center;
+}
+
+#preventa{
+    font-size: var(--tamañofuente);
+    text-align: center;
+}
+
+#preventatext{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    text-align: justify;
+}
+
 h1{
-    color: blue;
+    font-size: 5rem;
     text-align: center;
 };
 
